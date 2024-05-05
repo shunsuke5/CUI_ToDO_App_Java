@@ -8,12 +8,11 @@ public class Task {
 
     public void question() {
         try {
-            Scanner scanner = new java.util.Scanner(System.in);
-
             while(!isEnd) {
                 displayList();
                 System.out.println("追加：1  完了:2  プログラムの終了：3\n");
                 System.out.print("番号を選択してください >> ");
+                Scanner scanner = new java.util.Scanner(System.in);
                 int choice = scanner.nextInt();
                 
                 switch(choice) {
@@ -24,11 +23,10 @@ public class Task {
                         complete();
                         break;
                     case 3:
-                        end();
+                        end(scanner);
                         break;
                 }
             }
-            scanner.close();
         } catch (NoSuchElementException e) {
             System.out.println(e.getMessage());
             e.printStackTrace();
@@ -37,17 +35,16 @@ public class Task {
 
     }
     public void append() {
-        Scanner scanner = new Scanner(System.in);
+        Scanner scanner = new java.util.Scanner(System.in);
         System.out.print("タスクを入力してください >> ");
         String task = scanner.nextLine();
         this.taskList[taskCount] = task;
         taskCount++;
         System.out.println("新たにタスクを追加しました");
-        scanner.close();
     }
 
     public void complete() {
-        Scanner scanner = new Scanner(System.in);
+        Scanner scanner = new java.util.Scanner(System.in);
         System.out.print("\n完了したタスクを選択してください >> ");
         int complete = scanner.nextInt();
         for (int i = complete; i < this.taskCount; i++) {
@@ -55,12 +52,12 @@ public class Task {
         }
         System.out.println("タスクを完了しました");
         taskCount--;
-        scanner.close();
     }
 
-    public void end() {
+    public void end(Scanner scanner) {
         System.out.println("プログラムを終了します");
         this.isEnd = true;
+        scanner.close();
     }
 
     public void displayList() {
