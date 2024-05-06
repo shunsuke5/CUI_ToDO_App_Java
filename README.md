@@ -17,11 +17,13 @@ Update381
 #### Windows
 1.&ensp;任意のディレクトリに「CUI_ToDo_App」をダウンロード<br>
 2.&ensp;コマンドプロンプトを起動し「CUI_ToDo_App」ディレクトリに移動<br>
-3.&ensp;java Main を実行<br><br>
+3.&ensp;chcp 65001 を実行<br>
+4.&ensp;java Main を実行<br><br>
 
 #### Mac
 1.&ensp;任意のディレクトリに「CUI_ToDo_App」をダウンロード<br>
 2.&ensp;ターミナルを起動し「CUI_ToDo_App」ディレクトリに移動<br>
-3.&ensp;java Main を実行<br><br>
+3.&ensp;文字コードをUTF-8に変更する<br>
+4.&ensp;java Main を実行<br><br>
 
 ### 使い方
