@@ -38,7 +38,7 @@ public class Task {
     }
     public void append() {
         try {
-            Scanner scanner = new java.util.Scanner(System.in););
+            Scanner scanner = new java.util.Scanner(System.in);
             System.out.print("タスクを入力してください >> ");
             String task = scanner.nextLine();
             if (task.equals("")) {
