@@ -25,5 +25,3 @@ Update381
 2.&ensp;ターミナルを起動し「CUI_ToDo_App」ディレクトリに移動<br>
 3.&ensp;文字コードをUTF-8に変更する<br>
 4.&ensp;java Main を実行<br><br>
-
-### 使い方
